@@ -4,15 +4,18 @@
 #include <iostream>
 #include <string>
 
-class Zombie
-{
+class Zombie {
+	private:
+		std::string name;
+
 	public:
+		Zombie();
+		Zombie( std::string name );
+		~Zombie();
 		void setName(const std::string name);
 		const std::string& getName() const;
 		void announce();
 
-	private:
-		std::string name;
 };
 
 void	ZombieFoo();

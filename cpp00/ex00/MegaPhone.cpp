@@ -2,10 +2,8 @@
 #include <string>
 #include <cctype>
 
-int main(int argc, char **argv)
-{
-	if (argc < 2 || argc > 2)
-	{
+int main( int argc, char **argv ) {
+	if (argc < 2 || argc > 2) {
 		std::cout << "Your screaming at the megaphone. But it doesn't reply..." << std::endl;
 		return 1;
 	}

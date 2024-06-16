@@ -4,10 +4,10 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <limits>
 #include "Contact.hpp"
 
-class PhoneBook
-{
+class PhoneBook {
 	private:
 		Contact num[8];
 	

@@ -1,19 +1,12 @@
 #include "Zombie.hpp"
 
-static void	destructor(Zombie* Zom)
-{
-	std::cout << Zom->getName() << " has been destructed by the DESCTRUCTOR!" << std::endl;
-	delete Zom;
-}
-
-int	main(void)
-{
+int	main() {
 	Zombie* aNewZombie;
 
 	ZombieFoo();
-	randomChump("IAmZombie");
-	aNewZombie = newZombie("NewZombie");
+	randomChump( "iAmZombie" );
+	aNewZombie = newZombie( "aNewZombie" );
 	aNewZombie->announce();
-	destructor(aNewZombie);
-	return (0);
+	delete aNewZombie;
+	return 0;
 }

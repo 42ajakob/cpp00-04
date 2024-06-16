@@ -1,4 +1,3 @@
-#include <limits>
 #include "PhoneBook.hpp"
 
 void PhoneBook::setNum( Contact newContact, int i ) {
@@ -24,12 +23,11 @@ void PhoneBook::showContacts() {
 			break;
 		tmp = num[i].getFirstName();
 	}
-	while (index < 0 || index > 7)
-	{
+	while (index < 0 || index > 7) {
 		std::cout << "Type Index Number: ";
 		std::getline(std::cin, tmp);
 		try {
-			index = std::stoi(tmp);
+			index = std::atoi(tmp.c_str());
 		}
 		catch (const std::invalid_argument& e) {
 			index = 8;

@@ -1,7 +1,6 @@
 #include "PhoneBook.hpp"
 
-int	main()
-{
+int	main() {
 	PhoneBook	phonebook;
 	Contact		newContact;
 	std::string	input;
@@ -24,7 +23,6 @@ int	main()
 			newContact.setContact();
 			phonebook.setNum(newContact, i);
 			i++;
-			std::cout << i << std::endl;
 		}
 	}
 	return 0;

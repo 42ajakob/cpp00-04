@@ -2,8 +2,7 @@
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
-int main()
-{
+int main() {
 	{
 		Weapon club = Weapon("crude spiked club");
 
@@ -22,14 +21,13 @@ int main()
 		jim.attack();
 	}
 	{
-		Weapon whosSword = Weapon("Steve's Sword");
+		Weapon whosSword;
 
 		HumanA Alex("Alex", whosSword);
 		Alex.attack();
 
-		HumanB Steve("Steve");
+		HumanB Steve;
 		Steve.attack();
-		delete Steve.weapon;
 	}
-	return (0);
+	return 0;
 }

@@ -1,7 +1,6 @@
 #include "Harl.hpp"
 
-int	main()
-{
+int	main() {
 	Harl _Harl;
 	void (Harl::*functionPTR)(std::string);
 	functionPTR = &Harl::complain;
