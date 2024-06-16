@@ -36,7 +36,7 @@ const std::string& Contact::getDarkestSecret() {
 	return darkestSecret;
 }
 
-std::string Contact::formatContact( const std::string& str) const {
+std::string Contact::formatContact( const std::string& str ) const {
 	if (str.length() > 10) {
 		return str.substr(0, 9) + ".";
 	}
@@ -52,6 +52,7 @@ void Contact::setContact()
 	setNickName("");
 	setPhoneNumber("");
 	setDarkestSecret("");
+
 	while (firstName.empty()) {
 		std::cout << "First Name: ";
 		std::cout << std::flush;

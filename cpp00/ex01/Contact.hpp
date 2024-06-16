@@ -24,7 +24,7 @@ class Contact
 		const std::string& getNickName();
 		const std::string& getPhoneNumber();
 		const std::string& getDarkestSecret();
-		std::string formatContact( const std::string& str) const;
+		std::string formatContact( const std::string& str ) const;
 		void setContact();
 };
 

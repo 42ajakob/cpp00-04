@@ -13,7 +13,7 @@ class PhoneBook
 	
 	public:
 		void showContacts();
-		void setNum(Contact newContact, int i);
+		void setNum( Contact newContact, int i );
 };
 
 #endif

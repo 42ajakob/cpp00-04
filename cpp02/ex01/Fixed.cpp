@@ -15,12 +15,12 @@ Fixed::Fixed( const float num ) {
 	_fixedPointValue = roundf((num * (1 << _fractionalBits))); // roundf losing precision
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-Fixed::Fixed(const Fixed& other) {
+Fixed::Fixed( const Fixed& other ) {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = other;
 }
 
-Fixed& Fixed::operator=(const Fixed& other) {
+Fixed& Fixed::operator=( const Fixed& other ) {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &other) {
 		this->_fixedPointValue = other._fixedPointValue;
@@ -50,7 +50,7 @@ int Fixed::toInt( void ) const {
 	return _fixedPointValue >> _fractionalBits; // _fixedPointValue / 256. Int representation
 }
 
-std::ostream& operator<<(std::ostream& os, const Fixed& obj) {
+std::ostream& operator<<( std::ostream& os, const Fixed& obj ) {
     os << obj.toFloat();
     return os;
 }

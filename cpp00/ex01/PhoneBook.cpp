@@ -1,7 +1,7 @@
 #include <limits>
 #include "PhoneBook.hpp"
 
-void PhoneBook::setNum(Contact newContact, int i) {
+void PhoneBook::setNum( Contact newContact, int i ) {
 	num[i].setFirstName(newContact.getFirstName());
 	num[i].setLastName(newContact.getLastName());
 	num[i].setNickName(newContact.getNickName());

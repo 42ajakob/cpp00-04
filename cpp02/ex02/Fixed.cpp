@@ -13,11 +13,11 @@ Fixed::Fixed( const float num ) {
 	_fixedPointValue = roundf((num * (1 << _fractionalBits))); // roundf losing precision
 }
 
-Fixed::Fixed(const Fixed& other) {
-	*this = other;
+Fixed::Fixed( const Fixed& other ) {
+	*this = other; 
 }
 
-Fixed& Fixed::operator=(const Fixed& other) {
+Fixed& Fixed::operator=( const Fixed& other ) {
 	if (this != &other) {
 		this->_fixedPointValue = other._fixedPointValue;
 	}
@@ -52,46 +52,46 @@ int Fixed::toInt( void ) const {
 
 
 // COMPARISON
-bool Fixed::operator>(const Fixed& other) const {
+bool Fixed::operator>( const Fixed& other ) const {
     return _fixedPointValue > other._fixedPointValue;
 }
 
-bool Fixed::operator<(const Fixed& other) const {
+bool Fixed::operator<( const Fixed& other ) const {
     return _fixedPointValue < other._fixedPointValue;
 }
 
-bool Fixed::operator>=(const Fixed& other) const {
+bool Fixed::operator>=( const Fixed& other ) const {
     return _fixedPointValue >= other._fixedPointValue;
 }
 
-bool Fixed::operator<=(const Fixed& other) const {
+bool Fixed::operator<=( const Fixed& other ) const {
     return _fixedPointValue <= other._fixedPointValue;
 }
 
-bool Fixed::operator==(const Fixed& other) const {
+bool Fixed::operator==( const Fixed& other ) const {
     return _fixedPointValue == other._fixedPointValue;
 }
 
-bool Fixed::operator!=(const Fixed& other) const {
+bool Fixed::operator!=( const Fixed& other ) const {
     return _fixedPointValue != other._fixedPointValue;
 }
 
 
 
 // OPERATORS + - * /
-Fixed Fixed::operator+(const Fixed& other) const {
+Fixed Fixed::operator+( const Fixed& other ) const {
     return this->toFloat() + other.toFloat();
 }
 
-Fixed Fixed::operator-(const Fixed& other) const {
+Fixed Fixed::operator-( const Fixed& other ) const {
     return this->toFloat() - other.toFloat();
 }
 
-Fixed Fixed::operator*(const Fixed& other) const {
+Fixed Fixed::operator*( const Fixed& other ) const {
     return this->toFloat() * other.toFloat();
 }
 
-Fixed Fixed::operator/(const Fixed& other) const {
+Fixed Fixed::operator/( const Fixed& other ) const {
     return this->toFloat() / other.toFloat();
 }
 
@@ -103,7 +103,7 @@ Fixed& Fixed::operator++() {
     return *this;
 }
 
-Fixed Fixed::operator++(int) {
+Fixed Fixed::operator++( int ) {
     Fixed temp(*this);
     ++(*this);
     return temp;
@@ -114,7 +114,7 @@ Fixed& Fixed::operator--() {
     return *this;
 }
 
-Fixed Fixed::operator--(int) {
+Fixed Fixed::operator--( int ) {
     Fixed temp(*this);
     --(*this);
     return temp;
@@ -142,7 +142,7 @@ Fixed& Fixed::max( const Fixed& a, const Fixed& b ) {
 
 
 // OVERLOAD STDOUT
-std::ostream& operator<<(std::ostream& os, const Fixed& obj) {
+std::ostream& operator<<( std::ostream& os, const Fixed& obj ) {
     os << obj.toFloat();
     return os;
 }
