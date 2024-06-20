@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <sstream>
 
 void replaceSubstring(std::string& str, const std::string& s1, const std::string& s2) {
 	size_t	pos = 0;
@@ -34,11 +35,12 @@ int main(int argc, char **argv)
         return 1;
     }
 
-	std::string line;
-    while (std::getline(srcFile, line)) {
-        replaceSubstring(line, s1, s2);
-        desFile << line << std::endl;
-    }
+	std::ostringstream oss;
+	oss << srcFile.rdbuf();
+    std::string content = oss.str();
+	replaceSubstring(content, s1, s2);
+    desFile << content;
+
     srcFile.close();
     desFile.close();
 
