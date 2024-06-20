@@ -10,7 +10,7 @@ void PhoneBook::setNum( Contact newContact, int i ) {
 
 void PhoneBook::showContacts() {
 	std::string tmp = num[0].getFirstName();
-	int index = 8;
+	int index = 0;
 	int i = 0;
 
 	while (!(tmp.empty())) {
@@ -23,16 +23,11 @@ void PhoneBook::showContacts() {
 			break;
 		tmp = num[i].getFirstName();
 	}
-	while (index < 0 || index > 7) {
+	while (index < 1 || index > 8) {
 		std::cout << "Type Index Number: ";
 		std::getline(std::cin, tmp);
-		try {
-			index = std::atoi(tmp.c_str());
-		}
-		catch (const std::invalid_argument& e) {
-			index = 8;
-		}
-		if (index < 0 || index > 7)
+		index = std::atoi(tmp.c_str());
+		if (index < 1 || index > 8)
 			std::cout << "Wrong Index Number. Try again!" << std::endl;
 	}
 	std::cout << "First Name: " << num[index].getFirstName() << std::endl;
