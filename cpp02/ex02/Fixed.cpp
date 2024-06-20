@@ -65,6 +65,7 @@ bool Fixed::operator>=( const Fixed& other ) const {
 }
 
 bool Fixed::operator<=( const Fixed& other ) const {
+	
     return _fixedPointValue <= other._fixedPointValue;
 }
 
