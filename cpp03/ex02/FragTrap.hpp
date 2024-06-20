@@ -11,6 +11,7 @@ class FragTrap : public ClapTrap {
 		~FragTrap();
 
 		void highFivesGuys(void);
+
 };
 
 #endif
