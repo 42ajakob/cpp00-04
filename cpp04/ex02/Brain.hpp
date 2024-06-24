@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <string>
-#include <array>
 
 class Brain {
 	private:
