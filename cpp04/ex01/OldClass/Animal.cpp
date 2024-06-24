@@ -13,6 +13,7 @@ Animal::Animal( const Animal& other ) {
 Animal& Animal::operator=( const Animal& other ) {
 	if (this != &other) {
 		std::cout << "Animal: Copy assignment operator called" << std::endl;
+		type = other.type;
 	}
 	return *this;
 }

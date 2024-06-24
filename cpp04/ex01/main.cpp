@@ -61,5 +61,12 @@ int main()
 	delete brain;
 	delete[] catArr;
 	delete[] dogArr;
+
+	std::cout << "////////////////////////////////////////////////////////////////////" << std::endl;
+
+	Dog basic;
+	{
+		Dog tmp = basic;
+	}
 	return 0;
 }
